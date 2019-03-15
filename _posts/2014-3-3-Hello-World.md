@@ -3,4 +3,4 @@ layout: post
 title: You're up and running!
 ---
 
-[I'm an inline-style link with title](/post1"Google's Homepage")
+[I'm an inline-style link with title](../Vaibhav2001.github.io/_posts/post1)
