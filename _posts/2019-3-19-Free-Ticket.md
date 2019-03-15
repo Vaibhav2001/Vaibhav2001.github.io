@@ -23,7 +23,7 @@ Hurray!! We are done. Easy was'nt it. All we needed was a basic knowledge of gra
 
 If you need help with the code then here is my solution-
 
-`#include<bits/stdc++.h>
+```#include<bits/stdc++.h>
 using namespace std;
 
 // To add an edge in a bidirectional graph
@@ -151,4 +151,4 @@ int main()
 	}
 	cout << m;
 }
-`
+```
