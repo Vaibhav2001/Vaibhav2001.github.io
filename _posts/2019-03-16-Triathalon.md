@@ -21,7 +21,7 @@ The first thing that we notice is that in the last two events any number of part
 
 If you need help with the code then here is mine-
 
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
