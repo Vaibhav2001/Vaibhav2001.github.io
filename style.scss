@@ -283,10 +283,8 @@ footer {
   text-align: center;
 }
 
-br:after {
-    border-bottom:1px dashed black;
-    content: "";
-    display: block;
+p {
+  border-bottom: double;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
