@@ -2,8 +2,8 @@
 layout: post
 title: Free Ticket - INOI 2014
 ---
-<\b>
-<\b>
+<br/>
+<b/>
 [Question Link](https://www.codechef.com/INOIPRAC/problems/INOI1402)
 
 ### Overview
