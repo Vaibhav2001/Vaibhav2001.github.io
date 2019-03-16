@@ -57,5 +57,4 @@ int main()
 	}
 	cout << m;
 }
-
 ```
