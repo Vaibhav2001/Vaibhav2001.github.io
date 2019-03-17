@@ -6,7 +6,9 @@ title: Introduction To Graphs
 
 <div style="text-align: justify">
 It's difficult to directly explain what a graph is and what its utility is. So let's take a practical example.
+</div>
 
 ![Airline Network](Vaibhav2001.github.io/images/Graph 1.png)
+<div style="text-align: justify">
 Suppose we have a network of airlines connecting a bunch of cities. Now each city may have one more airlines that stop there or depart from there. This network of airlines can be efficiently described using graphs
 </div> 
