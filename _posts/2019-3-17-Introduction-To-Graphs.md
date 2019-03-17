@@ -31,3 +31,5 @@ An unweighted graph is a graph which has vertices and edges, but the <b>edges do
 <br>
 A weighted graph, on the other hand, is a graph which has edges with <b>some meaningful value associated with it</b>. Let's just take the above example example and make a modification.
 </div>
+
+![Weighted Airline Network](/images/Graph_2.png "Weighted Airline Network")
