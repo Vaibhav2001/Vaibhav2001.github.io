@@ -17,7 +17,5 @@ Suppose we have a network of airlines connecting a bunch of cities. Now each cit
 ![Airline Network](/images/Graph_1re.png "Airline Network")
 
 <div style="text-align: justify">
-<br>
-<br>
 The general terminology of graphs is as follows: each element is know as a <b>vertex or a node </b><em>(in this case each element is a city)</em>, and the arrow connecting the two vertices is known as an <b>edge</b> <b><em>(It is very important to note that the direction of the edge is very crucial in determining the whether it is possible to go from one edge to another or not).</em></b> We can see that there is no limit in the number of edges that can enter into a vertex.
 </div> 
