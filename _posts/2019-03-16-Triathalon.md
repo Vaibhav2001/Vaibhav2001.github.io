@@ -14,7 +14,7 @@ This question came in INOI in the year 2012 and was a basic question with a simp
 ### Understanding The Question
 
 <div style="text-align: justify">
-So the question tells us that there is some competition taking place in some town and the mayor of the town wants the competition to end <b>as soon as possible</b>. There are three parts to the competition: COBOL, pole vault, and donut-eating. We are told that only one person at a time can participate in <em></b>COBOL(which is the first event)</b></em> and there no limits for the latter ones. We already know beforehand the time required by each participant in each event. That is all there is in the question and now we need to find a way to solve it.
+So the question tells us that there is some competition taking place in some town and the mayor of the town wants the competition to end <b>as soon as possible</b>. There are three parts to the competition: COBOL, pole vault, and donut-eating. We are told that only one person at a time can participate in <em><b>COBOL(which is the first event)</b></em> and there no limits for the latter ones. We already know beforehand the time required by each participant in each event. That is all there is in the question and now we need to find a way to solve it.
 </div>
 
 ### Approaching The Solution
