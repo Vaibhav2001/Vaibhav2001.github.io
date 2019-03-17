@@ -26,8 +26,8 @@ The general terminology of graphs is as follows: each element is know as a <b>ve
 There are basically two types of graphs: Unweighted Graph, and Weighted Graph. 
 <br>
 <br>
-An unweighted graph is a graph which has vertices and edges, but the <br>edges do not have any value associated with it</br>. The above example was a perfect representation of an unweighted graph. The above graph showed a network of flights connecting 5 cities but didn't give us any other information.
+An unweighted graph is a graph which has vertices and edges, but the <b>edges do not have any value associated with it</b>. The above example was a perfect representation of an unweighted graph. The above graph showed a network of flights connecting 5 cities but didn't give us any other information.
 <br>
 <br>
-A weighted graph, on the other hand, is a graph which has edges with some meaningful value associated with it. Let's just take the above example example and make a modification.
+A weighted graph, on the other hand, is a graph which has edges with <b>some meaningful value associated with it</b>. Let's just take the above example example and make a modification.
 </div>
