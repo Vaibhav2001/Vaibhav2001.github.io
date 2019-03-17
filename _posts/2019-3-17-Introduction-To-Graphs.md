@@ -33,3 +33,10 @@ A weighted graph, on the other hand, is a graph which has edges with <b>some mea
 </div>
 
 ![Weighted Airline Network](/images/Graph_2.png "Weighted Airline Network")
+
+<div style="text-align: justify">
+This graph now has values associated to it. Let's say these values are the <b><em>durations of the flight</b></em>. Notice there is a <b>negative edge</b>, which seems absurd, which it technically is, however, I deliberately put it there to <b>emphasise on the fact that it is possible</b> and you might encounter such scenarios in some problems.
+<br>
+<br>
+So, we are now <b>DONE</b> with basics of graph and now we can move on to ways of <em><b>traversing</em></b> a graph.
+</div>
