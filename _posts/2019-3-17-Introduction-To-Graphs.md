@@ -4,4 +4,8 @@ title: Introduction To Graphs
 
 ### What Are Graphs??
 
-Let's imagine a network of airlines connecting a bunch of cities. Now each city may have one more airlines that stop there or depart from there
+<div style="text-align: justify">
+It's difficult to directly explain what a graph is and what its utility is. So let's take a practical example.
+  
+Suppose we have a network of airlines connecting a bunch of cities. Now each city may have one more airlines that stop there or depart from there. This network of airlines can be efficiently described using graphs
+</div> 
