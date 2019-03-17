@@ -23,13 +23,13 @@ The general terminology of graphs is as follows: each element is know as a <b>ve
 ### Types of Graphs
 
 <div style="text-align: justify">
-There are basically two types of graphs: Unweighted Graph, and Weighted Graph. 
+There are basically two types of graphs: <em><b>Unweighted Graph</b></em>, and <em><b>Weighted Graph</b></em>. 
 <br>
 <br>
-An unweighted graph is a graph which has vertices and edges, but the <b>edges do not have any value associated with it</b>. The above example was a perfect representation of an unweighted graph. The above graph showed a network of flights connecting 5 cities but didn't give us any other information.
+An <em><b>unweighted graph</b></em>, is a graph which has vertices and edges, but the <b>edges do not have any value associated with it</b>. The above example was a perfect representation of an unweighted graph. The above graph showed a network of flights connecting 5 cities but didn't give us any other information.
 <br>
 <br>
-A weighted graph, on the other hand, is a graph which has edges with <b>some meaningful value associated with it</b>. Let's just take the above example example and make a modification.
+A <em><b>weighted graph</b></em>,, on the other hand, is a graph which has edges with <b>some meaningful value associated with it</b>. Let's just take the above example example and make a modification.
 </div>
 
 ![Weighted Airline Network](/images/Graph_2.png "Weighted Airline Network")
