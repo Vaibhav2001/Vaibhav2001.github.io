@@ -8,7 +8,7 @@ title: Introduction To Graphs
 It's difficult to directly explain what a graph is and what its utility is. So let's take a practical example.
 </div>
 
-### ![Airline Network](https://github.com/Vaibhav2001/Vaibhav2001.github.io/blob/master/images/Graph%201.png)
+### ![Airline Network](https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/02/google-pacman-796x419.jpg)
 
 <div style="text-align: justify">
 Suppose we have a network of airlines connecting a bunch of cities. Now each city may have one more airlines that stop there or depart from there. This network of airlines can be efficiently described using graphs. The above image shows a graph for our example. There are five cities.
