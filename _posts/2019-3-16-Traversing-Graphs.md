@@ -7,7 +7,7 @@ title: Traversing Graphs
 <div style="text-justify">
 <b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>. It can be understood by looking at our earlier example of the airline network.
 </div>
-![Airline Network](/images/Graph_1.png)
+![Airline Network](/images/Graph_1.png "Airline Network")
 <div style="text-justify">
-We can see it is possible for us to move from green to red by follwing the edges. We first move from <em><b>green to yellow</b></em> and then from <em><b>yellow to red</b></em>. 
+We can see it is possible for us to move from green to red by follwing the edges. We first move from <em><b>green to yellow</b></em> and then from <em><b>yellow to red</b></em>. We can move from red to yellow in two ways if you see clearly. Thus, we can say that <b>traversal through graphs</b> is nothing but following the <em><b>paths</b></em> in the graph made by the <b>edges</b>.
 </div>
