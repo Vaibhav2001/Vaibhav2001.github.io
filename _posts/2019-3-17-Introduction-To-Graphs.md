@@ -38,7 +38,7 @@ A <em><b>weighted graph</b></em>, on the other hand, is a graph which has edges 
 This graph now has values associated to it. Let's say these values are the <b><em>durations of the flight</em></b>. Notice there is a <b>negative edge</b>, which seems absurd, which it technically is, however, I deliberately put it there to <b>emphasise on the fact that it is possible</b> and you might encounter such scenarios in some problems.
 <br>
 <br>
-Graphs might be divided into two other types: <b>directed</b> and <b>undirected</b>. They are not that difficult but understanding them is <em><b>very crucial</b></em>.
+Graphs might be divided into two other types: <b>directed</b> and <b>undirected</b>. They are not that difficult but understanding them is <em><b>very crucial</b></em>. <b>Undirected graphs</b> are those in which if it is possible to go from <b>node A to another node B</b> then it is <b>also possible to go from node B to node A</b>. <b>Directed graphs</b> are those in which it is not necessarily true that if it is <b>possible to go from node A to node B then it is possible to go from node B to node A</b>.
 <br>
 <br>
 So, we are now <b>DONE</b> with basics of graph and now we can move on to ways of <em><b>traversing</b></em> a graph.
