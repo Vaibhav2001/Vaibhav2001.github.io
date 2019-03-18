@@ -39,4 +39,39 @@ This graph now has values associated to it. Let's say these values are the <b><e
 <br>
 <br>
 So, we are now <b>DONE</b> with basics of graph and now we can move on to ways of <em><b>traversing</b></em> a graph.
+<br>
+<br>
 </div>
+
+<div style="text-align: justify">
+Refer the code below if you don't have any idea about constructing a graph.
+</div>
+
+```cpp
+//this in an unweighted graph
+//where N is the number of nodes in the graph
+//this is basically a array of lists or vectors where every ith location stores all the nodes connected to it.
+vector<int> adj[N];
+
+//for weighted graph
+//here the pair stores the connected nodes as well as the the weight of the edge
+vector<pair<int, int> adj[N];
+```
+
+<div style="text-align: justify">
+And here is how you can add an edge in the graph.
+</div>
+
+```cpp
+//for an unweighted garph
+//note that you can move from u to v and not v to u
+void addEdge(vector<int> adj[], int u, int v)
+{
+    adj[u].push_back(v);
+}
+
+//for a weighted graph
+void addEdge(vector <pair<int, int> > adj[], int u, int v, int wt)
+{
+	adj[u].push_back(make_pair(v, wt));
+}
