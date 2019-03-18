@@ -8,7 +8,7 @@ title: Triathalon - INOI 2012
 ### Overview
 
 <div style="text-align: justify">
-<t>This question came in INOI in the year 2012 and was a basic question with a <b>simple twist</b>. Any experienced programmer could just take one look at this question and get to the solution immediately. However, when I first saw this question(starting as a beginner in competetive coding) the solution didn't come to me so easily. So, if you are beginner or even if you have a bit of an experience with coding and you dont get the solution after putting in your brains, chill. One important thing that you will, however, learn from this question is how to use your mind to <em><b>think systematically</b></em>.
+This question came in INOI in the year 2012 and was a basic question with a <b>simple twist</b>. Any experienced programmer could just take one look at this question and get to the solution immediately. However, when I first saw this question(starting as a beginner in competetive coding) the solution didn't come to me so easily. So, if you are beginner or even if you have a bit of an experience with coding and you dont get the solution after putting in your brains, chill. One important thing that you will, however, learn from this question is how to use your mind to <em><b>think systematically</b></em>.
 </div>
 
 ### Understanding The Question
