@@ -93,7 +93,7 @@ void BFS(vector<int> adj[], int s, int N)
 ### Depth First Search(DFS) 
 
 <div style="text-justify">
-  <em><b>Depth First Search</b></em> is the traversing technique in graphs can be described as a <em><b>recursive technique</b></em> in which we <em><b>first visit the first child of the current node and then change the current node to the first child</b></em>. When this <b>cycle ends</b> then we visit the second node of the last visited node <em>(if it does not exist we keep <b>moving backwards</b>)</em> This all seems wordy and complicated but will be pretty <b>simple</b> when you start getting the essence of it. Let's look at ur previous example.
+  <em><b>Depth First Search</b></em> is the traversing technique in graphs can be described as a <em><b>recursive technique</b></em> in which we <em><b>first visit the first child of the current node and then change the current node to the first child</b></em>. When this <b>cycle ends</b> then we visit the second node of the last visited node <em>(if it does not exist we keep <b>moving backwards</b>)</em> This all seems wordy and complicated but will be pretty <b>simple</b> when you start getting the essence of it. Let's look at our previous example.
 </div>
 
 ![Airline Network](/images/Graph_1re.png "Airline Network")
