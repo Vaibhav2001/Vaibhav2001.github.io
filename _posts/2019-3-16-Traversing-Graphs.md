@@ -5,7 +5,7 @@ title: Traversing Graphs
 ### What is Traversal?
 
 <div style="text-justify">
-<b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>(If you do not know the basics of graphs first <a href="https://vaibhav2001.github.io/Introduction-To-Graphs/">click here</a>. It can be understood by looking at our <em><b>earlier example</b></em> of the airline network.
+<b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>(If you do not know the basics of graphs first <a href="https://vaibhav2001.github.io/Introduction-To-Graphs/">click here</a>). It can be understood by looking at our <em><b>earlier example</b></em> of the airline network.
 </div>
 
 ![Airline Network](/images/Graph_1.png "Airline Network")
