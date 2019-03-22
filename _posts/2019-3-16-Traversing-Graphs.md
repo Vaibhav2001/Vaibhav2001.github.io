@@ -5,7 +5,7 @@ title: Traversing Graphs
 ### What is Traversal?
 
 <div style="text-justify">
-<b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>. It can be understood by looking at our <em><b>earlier example</b></em> of the airline network.
+<b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>(If you do not know the basics of graphs first <a href="https://vaibhav2001.github.io/Introduction-To-Graphs/">click here</a>. It can be understood by looking at our <em><b>earlier example</b></em> of the airline network.
 </div>
 
 ![Airline Network](/images/Graph_1.png "Airline Network")
@@ -85,6 +85,50 @@ void BFS(vector<int> adj[], int s, int N)
                 visited[adj[s][i]] = true;
                 queue.push_back(adj[s][i]);
             }
+        }
+    }
+}
+```
+
+### Depth First Search(DFS) 
+
+<div style="text-justify">
+  <em><b>Depth First Search</b></em> is the traversing technique in graphs can be described as a <em><b>recursive technique</b></em> in which we <em><b>first visit the first child of the current node and then change the current node to the first child</b></em>. When this <b>cycle ends</b> then we visit the second node of the last visited node <em>(if it does not exist we keep <b>moving backwards</b>)</em> This all seems wordy and complicated but will be pretty <b>simple</b> when you start getting the essence of it. Let's look at ur previous example.
+</div>
+
+![Airline Network](/images/Graph_1re.png "Airline Network")
+
+<div style="text-justify">
+  "HEY!!! This is not same as the previous example", one might think. Think again. Recall the last lesson. Just changing the orientation of nodes won't change the meaning of the graph. So now let's see if it is possible to reach the <b>YELLOW node from the RED node</b>. So firstly we go to the first child of the red node <em>(let's consider it to be the <b>green one</b>)</em> and then we move to the first child of the green node and which is the yellow one. Yippee we are done. You should notice that we did not even come back to the blue node <em><b>(the second child of our first source node)</b></em> because we didn't need to, however, if we were <b>searching for the blue or the pink node</b> we would be compelled to return back.
+  <br>
+  <br>
+Here is the code for DFS.
+</div>
+
+```cpp
+void DFSUtil(int u, vector<int> adj[], vector<bool> &visited)
+{
+    visited[u] = true;
+    cout << u << " ";
+    for (int i=0; i<adj[u].size(); i++)
+    {
+        if (visited[adj[u][i]] == false)
+        {
+            DFSUtil(adj[u][i], adj, visited);
+        }
+    }
+}
+ 
+// This function does DFSUtil() for all 
+// unvisited vertices.
+void DFS(vector<int> adj[], int N)
+{
+    vector<bool> visited(N, false);
+    for (int u=0; u<N; u++)
+    {
+        if (visited[u] == false)
+        {
+            DFSUtil(u, adj, visited);
         }
     }
 }
