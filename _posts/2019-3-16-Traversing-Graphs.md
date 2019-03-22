@@ -41,6 +41,51 @@ We can see it is possible for us to move from green to red by follwing the edges
 ![BFS 2](/images/BFS_2.png "BFS 2")
 
 <div style="text-justify">
-  
+  Note that green node is not there twice in our queue because it is already visited. Now we have to repeat the above process with the node in the front i.e. <b>the green node</b>. After this our queue and visited array will look like this.
 </div>
 
+![BFS 3](/images/BFS_3.png "BFS 3")
+
+<div style="text-justify">
+  Now we have visited the yellow node and we can <b>break out of the loop</b> and <b>print yes</b>.
+  <br>
+  <br>
+  So, we see BFS is a simple algorithm with not much complexity. If you need help with the code you can see my code.
+</div>
+
+```cpp
+//BFS
+//s is the current node
+void BFS(vector<int> adj[], int s, int N)
+{
+    // Mark all the vertices as not visited
+    vector<bool> visited(N, false);
+
+    // Create a queue for BFS
+    list<int> queue;
+ 
+    // Mark the current node as visited and enqueue it
+    visited[s] = true;
+    queue.push_back(s);
+ 
+    while(!queue.empty())
+    {
+        // Dequeue a vertex from queue and print it
+        s = queue.front();
+        cout << s << " ";
+        queue.pop_front();
+ 
+        // Get all adjacent vertices of the dequeued
+        // vertex s. If a adjacent has not been visited, 
+        // then mark it visited and enqueue it
+        for (int i = 0; i < adj[s].size(); ++i)
+        {
+            if (!visited[adj[s][i]])
+            {
+                visited[adj[s][i]] = true;
+                queue.push_back(adj[s][i]);
+            }
+        }
+    }
+}
+```
