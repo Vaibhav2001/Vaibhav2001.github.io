@@ -20,5 +20,20 @@ We can see it is possible for us to move from green to red by follwing the edges
   Now let's get into more <em>detail</em> about out search techniques which are essential componet in learning an understanding graphs.
 </div>
 
-### Breath First Search(BFS)
+### Breath First Search(BFS) 
 
+<div style="text-justify">
+  <em><b>Breadth First Search</b></em> is the traversing technique in graphs in which we first <b>visit<em> (reach)</em></b> <b>all the children</b> of a particular node and then <b>visit all the children of the first node</b> in the list. The way in whcih we develop the list is that of a queue. We can using <b>any particular node</b> and <b>BFS</b> will tell us if it is possible to <b>reach a <em>particular node</em> from that node</b>.
+</div>
+
+![Airline Network](/images/Graph_1.png "Airline Network")
+
+<div style="text-justify">
+  Let's take our original example of the airline network to understand this concept more vividly. Suppose, we want to know if it is possible to reach the <b>YELLOW node from our RED node</b>. So here our <b>source vertex</b> is the red node. So according to our discussion above we have to take an empty queue and visit all the clidren of the red node. First thing that we have to do is to store that <b>we have already visited the source node <em>(red node)</em></b>. Red node has two  children and we visit them and <b>push</b> them node into our queue. After this our queue and visited array will look like this.
+</div>
+
+![BFS 1](/images/BFS_1.png "BFS 1")
+
+<div style="text-justify">
+  
+</div>
