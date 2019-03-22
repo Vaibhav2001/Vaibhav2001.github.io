@@ -35,5 +35,12 @@ We can see it is possible for us to move from green to red by follwing the edges
 ![BFS 1](/images/BFS_1.png "BFS 1")
 
 <div style="text-justify">
+  Here, the arrow indicates that the blue node is at the front. We see that we have already visited three nodes and we have to <b>process two nodes</b>. The front node is the <b>blue node</b> and we make it our <b>source vertex</b>. We now have to repeat the process and visit all of its children. After this our queue and visited array will look like this.
+</div>
+
+![BFS 2](/images/BFS_2.png "BFS 2")
+
+<div style="text-justify">
   
 </div>
+
