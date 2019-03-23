@@ -14,4 +14,4 @@ Computing <em><b>shortest path in graphs</b></em> is an essential concept. When 
 This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. This algorithm provides us with an efficient way to compute the shortest path in a graph with <b>NON NEGATIVE</b> edges. It is an interesting concept and i svery useful to solve <em><b>real life problems</b></em>. Even some <b>map apps</b> that we use these days rely on it. Let's look at an example of a <b>road network</b>.
 </div>
 
-![Road Network](/images/Shortest.png"Road Network")
+![Road Network](/images/Shortest.png "Road Network")
