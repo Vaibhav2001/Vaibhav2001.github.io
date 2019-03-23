@@ -4,13 +4,13 @@ title: Traversing Graphs
 
 ### What is Traversal?
 
-<div style="text-justify">
+<div style="text-align: justify">
 <b>Traversal</b> in a graph can be defined as moving from one <b>node</b> of the graph to any other node along its <b>edges</b>(If you do not know the basics of graphs first <a href="https://vaibhav2001.github.io/Introduction-To-Graphs/">click here</a>). It can be understood by looking at our <em><b>earlier example</b></em> of the airline network.
 </div>
 
 ![Airline Network](/images/Graph_1.png "Airline Network")
 
-<div style="text-justify">
+<div style="text-align: justify">
 We can see it is possible for us to move from green to red by follwing the edges. We first move from <em><b>green to yellow</b></em> and then from <em><b>yellow to red</b></em>. We can move from red to yellow in two ways if you see clearly. Thus, we can say that <b>traversal through graphs</b> is nothing but following the <em><b>paths</b></em> in the graph made by the <b>edges</b>. There are two ways of traversal in a graph: <em><b>Breadth First Search(BFS)</b></em> and <em><b>Depth First Search(DFS)</b></em>. 
 <br>
 <br>
@@ -22,31 +22,31 @@ We can see it is possible for us to move from green to red by follwing the edges
 
 ### Breath First Search(BFS) 
 
-<div style="text-justify">
+<div style="text-align: justify">
   <em><b>Breadth First Search</b></em> is the traversing technique in graphs in which we first <b>visit<em> (reach)</em></b> <b>all the children</b> of a particular node and then <b>visit all the children of the first node</b> in the list. The way in whcih we develop the list is that of a queue. We can using <b>any particular node</b> and <b>BFS</b> will tell us if it is possible to <b>reach a <em>particular node</em> from that node</b>.
 </div>
 
 ![Airline Network](/images/Graph_1.png "Airline Network")
 
-<div style="text-justify">
+<div style="text-align: justify">
   Let's take our original example of the airline network to understand this concept more vividly. Suppose, we want to know if it is possible to reach the <b>YELLOW node from our RED node</b>. So here our <b>source vertex</b> is the red node. So according to our discussion above we have to take an empty queue and visit all the clidren of the red node. First thing that we have to do is to store that <b>we have already visited the source node <em>(red node)</em></b>. Red node has two  children and we visit them and <b>push</b> them node into our queue. After this our queue and visited array will look like this.
 </div>
 
 ![BFS 1](/images/BFS_1.png "BFS 1")
 
-<div style="text-justify">
+<div style="text-align: justify">
   Here, the arrow indicates that the blue node is at the front. We see that we have already visited three nodes and we have to <b>process two nodes</b>. The front node is the <b>blue node</b> and we make it our <b>source vertex</b>. We now have to repeat the process and visit all of its children. After this our queue and visited array will look like this.
 </div>
 
 ![BFS 2](/images/BFS_2.png "BFS 2")
 
-<div style="text-justify">
+<div style="text-align: justify">
   Note that green node is not there twice in our queue because it is already visited. Now we have to repeat the above process with the node in the front i.e. <b>the green node</b>. After this our queue and visited array will look like this.
 </div>
 
 ![BFS 3](/images/BFS_3.png "BFS 3")
 
-<div style="text-justify">
+<div style="text-align: justify">
   Now we have visited the yellow node and we can <b>break out of the loop</b> and <b>print yes</b>.
   <br>
   <br>
@@ -92,13 +92,13 @@ void BFS(vector<int> adj[], int s, int N)
 
 ### Depth First Search(DFS) 
 
-<div style="text-justify">
+<div style="text-align: justify">
   <em><b>Depth First Search</b></em> is the traversing technique in graphs can be described as a <em><b>recursive technique</b></em> in which we <em><b>first visit the first child of the current node and then change the current node to the first child</b></em>. When this <b>cycle ends</b> then we visit the second node of the last visited node <em>(if it does not exist we keep <b>moving backwards</b>)</em> This all seems wordy and complicated but will be pretty <b>simple</b> when you start getting the essence of it. Let's look at our previous example.
 </div>
 
 ![Airline Network](/images/Graph_1re.png "Airline Network")
 
-<div style="text-justify">
+<div style="text-align: justify">
   "HEY!!! This is not same as the previous example", one might think. Think again. Recall the last lesson. Just changing the orientation of nodes won't change the meaning of the graph. So now let's see if it is possible to reach the <b>YELLOW node from the RED node</b>. So firstly we go to the first child of the red node <em>(let's consider it to be the <b>green one</b>)</em> and then we move to the first child of the green node and which is the yellow one. Yippee we are done. You should notice that we did not even come back to the blue node <em><b>(the second child of our first source node)</b></em> because we didn't need to, however, if we were <b>searching for the blue or the pink node</b> we would be compelled to return back.
   <br>
   <br>
