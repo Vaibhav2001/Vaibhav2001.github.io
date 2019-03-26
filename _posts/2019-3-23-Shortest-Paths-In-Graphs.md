@@ -117,6 +117,6 @@ Very few people use the above implementation of Dijkstra's Algorithm. However, t
 I have used a <b>set of pairs of integers</b> named <em><b>visdist</b></em>. The pair stores all the unvisited nodes with their distances. Then intialised an <b>integer vector</b> named dist to store the distances to <b>maximum possible value of an integer <em>(think why?)</em></b>. Then whatver I do from that point on is what we already discussed. I insert the minimum possible value to reach the source vertex from itslef as 0.This would help us move forward using the <b>basic priciple</b> of this algorithm. Then all there is left to do is to iterate over <b>all of the children</b> of the current univisited node with the shortest distance <b>(The first such node will always be the source itslef)</b> and update their distance. We need to do this every node is visited. The reason we use a set here is simple: <b>it stores the values in ascending order for us</b>; so we dont have to find it using another function. The set also stores only those pairs which are currently visited by the last node <b><em>(or the ones before that if they are not explored)</em> but are yet to be explored</b>. 
 <br>
 <br>
-This wraps up our Dijkstra's Algorithm now we can move on to discuss about the other Algorithms and deal with negative edges.
+This wraps up our discussion of Dijkstra's Algorithm. Now we can move on to discuss about the other algorithms and deal with <b>negative edges</b>.
 </div>
 
