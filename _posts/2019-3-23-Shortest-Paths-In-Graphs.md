@@ -26,5 +26,5 @@ This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. Thi
 ![Road Network](/images/Dijkstra_1.png "Road Network")
 
 <div style="text-align: justify">
-  
+  The fire won't stop but keep moving further the next <em>useful destination</em> that it reaches is the <b>orange node</b>.
 </div>
