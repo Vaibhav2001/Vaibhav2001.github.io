@@ -120,3 +120,8 @@ I have used a <b>set of pairs of integers</b> named <em><b>visdist</b></em>. The
 	This wraps up our discussion of <em><b>Dijkstra's Algorithm</b></em>. Now we can move on to discuss about the other algorithms and deal with <b>negative edges</b>.
 </div>
 
+### Bellman Ford Algorithm
+
+<div style="text-align: justify">
+	This is an algorithm which is based on <b>Dynamic Programming</b>. The reason why we use it over Dijkstra is that it can deal with even those graphs which have <em><b>negative edge weights but not a negative cycle</b></em>. It is an <b>efficient algorithm</b> and is useful when dealing with certain types of problems.
+</div>
