@@ -20,5 +20,5 @@ This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. Thi
   The above graph shows an <b>intricate network</b> of roads in a city. Suppose we have to the find the shortest path from the <b>green node</b> to the <b>blue one</b>. Now, naturally a naive approach would be to move first towards the <em><b>yellow node since the path length is smaller</b></em> than that from <b>green to orange</b>. However, once we study the network it seems that we have to do just the opposite. Here is where <b>Dijkstra's algorithm</b> comes in. 
 <br>
 <br>
-  The best way to imagine <b>Dijkstra's algorithm</b> running is by <b>imagining</b> that we fire up the source node and now the <em><b>fire travels along all the edges at a uniform speed<b><em>.
+  The best way to imagine <b>Dijkstra's algorithm</b> running is by <b>imagining</b> that we fire up the source node and now the <em><b>fire travels along all the edges at a uniform speed</b></em>. So now let's <b>fire up</b> the green node. Our fire first reaches the <b>yellow node</b>.
 </div>
