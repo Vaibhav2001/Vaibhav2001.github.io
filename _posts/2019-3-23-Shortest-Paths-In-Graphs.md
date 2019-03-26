@@ -7,10 +7,10 @@ Computing <em><b>shortest path in graphs</b></em> is an essential concept. When 
 </div>
 
 ### Dijkstra's Algoritm
-
+<div id = "Dijkstra"></div>
 ![Edsger W. Dijkstra](/images/Edsger_Wybe_Dijkstra.jpg "Edsger W. Dijkstra")
 
-<div style="text-align: justify" id="Dijkstra">
+<div style="text-align: justify">
 This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. This algorithm provides us with an efficient way to compute the shortest path in a graph with <b>NON NEGATIVE</b> edges. It is an interesting concept and is very useful to solve <em><b>real life problems</b></em>. Even some <b>map apps</b> that we use these days rely on it. Let's look at an example of a <b>road network</b>.
 </div>
 
