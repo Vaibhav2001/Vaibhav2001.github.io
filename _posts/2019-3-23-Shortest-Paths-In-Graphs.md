@@ -26,5 +26,90 @@ This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. Thi
 ![Road Network](/images/Dijkstra_1.png "Road Network")
 
 <div style="text-align: justify">
-  The fire won't stop but keep moving further the next <em>useful destination</em> that it reaches is the <b>orange node</b>.
+  The fire won't stop but keep moving further, and the next <em>useful destination</em> that it reaches is the <b>orange node</b>. It will also reach the <b>green node</b> once again <b>along the edge from yellow to green</b>. At this stage our graph will look something like this where it is halfway (5 untits) away from the <b>red node</b> along the path from yellow to red. 
+</div>
+
+![Road Network](/images/Dijkstra_2.png "Road Network")
+
+<div style="text-align: justify">
+  The fire now reaches the <b>red node</b> from the orange one and we now see that it is still one unti away from red node <b>along the path from yellow to red</b>. It starts moving along many edges now but we can focus on the ones that our <em>useful</em> to us. Now the graph looks lthe this.
+</div>
+
+![Road Network](/images/Dijkstra_3.png "Road Network")
+
+<div style="text-align: justify">
+  The fire will <em>eventually</em> reach our target node, which is the <b>blue one</b>. The graph is shown below. Notice, that in this particular example the fire has covered all the edges but it is <b>NOT necessary</b>.
+</div>
+
+![Road Network](/images/Dijkstra_4.png "Road Network")
+
+<div style="text-align: justify">
+  This was the <b>virtual analysis</b> of the <em><b>Dijskta's Algorithm</b></em>. Now all we need to do is to implement this in code.
+</div>
+
+### Developing The Code for Dijkstra 
+
+<div style="text-align: justify">
+I would suggest you to look at the code below before moving forward so that you can get an <bb>essense of what follows</b>.
+</div>
+
+```cpp
+//Improved and efficient Djikstra
+void ImprovedDjikstravector(vector <pair<int,int > > adj[], int src, int V)
+{
+	//stores all unvisited vertices along with their shortest possible
+	//path at the moment
+	set<pair<int, int> > visdist ;
+
+	// Create a vector for distances and initialize all 
+    // distances as infinite (INF) 
+    vector<int> dist(V, INT_MAX); 
+
+    //adds the source node
+    visdist.insert(make_pair(0, src));
+
+    dist[0] = 0;
+    while(!visdist.empty())
+    {
+    	// The first vertex in Set is the minimum distance 
+        // vertex, extract it from set. 
+        pair<int, int> tmp = *(visdist.begin()); 
+        visdist.erase(visdist.begin()); 
+
+        //stores the current parent vertex
+        int u = tmp.second;
+        for (auto i = adj[u].begin(); i != adj[u].end(); ++i) 
+        { 
+            // Get vertex label and weight of current adjacent 
+            // of u. 
+            int v = (*i).first; 
+            int weight = (*i).second; 
+  
+            //  If there is shorter path to v through u. 
+            if (dist[v] > dist[u] + weight) 
+            { 
+                /*  If distance of v is not INF then it must be in 
+                    our set, so removing it and inserting again 
+                    with updated less distance.   
+                    Note : We extract only those vertices from Set 
+                    for which distance is finalized. So for them,  
+                    we would never reach here.  */
+                if (dist[v] != INT_MAX) 
+                    visdist.erase(visdist.find(make_pair(dist[v], v))); 
+  
+                // Updating distance of v 
+                dist[v] = dist[u] + weight; 
+                visdist.insert(make_pair(dist[v], v)); 
+            } 
+        } 
+    } 
+     // Print shortest distances stored in dist[] 
+    printf("Vertex   Distance from Source\n"); 
+    for (int i = 0; i < V; ++i) 
+        printf("%d \t\t %d\n", i, dist[i]); 
+}
+```
+
+<div style="text-align: justify">
+Very few people use the above implementation of Dijkstra's Algorithm. However, this is <b>very efficient</b> and using this is in competitions will be a great advantage.
 </div>
