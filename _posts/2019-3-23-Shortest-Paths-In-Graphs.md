@@ -3,7 +3,7 @@ title: Shortest Paths In Graphs
 ---
 
 <div style="text-align: justify">
-Computing <em><b>shortest path in graphs</b></em> is an essential concept. When you encounter problems in some coding competition it will generally be a combination of <b>shortest paths and traversal</b>. There <b>three</b> algorithms that are <em><b>essential</b></em> to learn to compute shortest paths: <b><em><a href="#Dijkstra">Dijkstra's Algorithm</a>, Bellman Ford Algorithm and Floyd Warshall Algorithm</em></b>.
+Computing <em><b>shortest path in graphs</b></em> is an essential concept. When you encounter problems in some coding competition it will generally be a combination of <b>shortest paths and traversal</b>. There <b>three</b> algorithms that are <em><b>essential</b></em> to learn to compute shortest paths: <b><em><a href="#Dijkstra">Dijkstra's Algorithm</a>, <a href="Bellman">Bellman Ford Algorithm</a> and Floyd Warshall Algorithm</em></b>.
 </div>
 
 ### Dijkstra's Algoritm
@@ -122,6 +122,6 @@ I have used a <b>set of pairs of integers</b> named <em><b>visdist</b></em>. The
 
 ### Bellman Ford Algorithm
 
-<div style="text-align: justify">
-	This is an algorithm which is based on <b>Dynamic Programming</b>. The reason why we use it over Dijkstra is that it can deal with even those graphs which have <em><b>negative edge weights but not a negative cycle</b></em>. It is an <b>efficient algorithm</b> and is useful when dealing with certain types of problems.
+<div style="text-align: justify" id = "Bellman">
+This is an algorithm which is based on <b>Dynamic Programming</b>. The reason why we use it over Dijkstra is that it can deal with even those graphs which have <em><b>negative edge weights but not a negative cycle</b></em>. It is an <b>efficient algorithm</b> and is useful when dealing with certain types of problems.
 </div>
