@@ -50,7 +50,7 @@ This algorithm is named after a dutch computer scientist Edsger W. Dijkstra. Thi
 ### Developing The Code for Dijkstra 
 
 <div style="text-align: justify">
-I would suggest you to look at the code below before moving forward so that you can get an <bb>essense of what follows</b>.
+I would suggest you to look at the code below before moving forward so that you can get an <b>essense of what follows</b>.
 </div>
 
 ```cpp
@@ -111,5 +111,8 @@ void ImprovedDjikstravector(vector <pair<int,int > > adj[], int src, int V)
 ```
 
 <div style="text-align: justify">
-Very few people use the above implementation of Dijkstra's Algorithm. However, this is <b>very efficient</b> and using this is in competitions will be a great advantage.
+Very few people use the above implementation of Dijkstra's Algorithm. However, this is <b>very efficient</b> and using this is in competitions will be a great advantage. So now let's discuss what I did up there.
+<br>
+<br>
+	I have used a <b>set of pairs of integers</b> named <em><b>visdist</b></em>.
 </div>
