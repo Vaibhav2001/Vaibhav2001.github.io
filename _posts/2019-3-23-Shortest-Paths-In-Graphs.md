@@ -8,6 +8,7 @@ Computing <em><b>shortest path in graphs</b></em> is an essential concept. When 
 
 ### Dijkstra's Algoritm
 <div id = "Dijkstra"></div>
+
 ![Edsger W. Dijkstra](/images/Edsger_Wybe_Dijkstra.jpg "Edsger W. Dijkstra")
 
 <div style="text-align: justify">
