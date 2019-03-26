@@ -6,8 +6,9 @@ title: Shortest Paths In Graphs
 Computing <em><b>shortest path in graphs</b></em> is an essential concept. When you encounter problems in some coding competition it will generally be a combination of <b>shortest paths and traversal</b>. There <b>three</b> algorithms that are <em><b>essential</b></em> to learn to compute shortest paths: <b><em><a href="#Dijkstra">Dijkstra's Algorithm</a>, <a href="#Bellman">Bellman Ford Algorithm</a> and Floyd Warshall Algorithm</em></b>.
 </div>
 
-### Dijkstra's Algoritm
 <div id = "Dijkstra"></div>
+
+### Dijkstra's Algoritm
 
 ![Edsger W. Dijkstra](/images/Edsger_Wybe_Dijkstra.jpg "Edsger W. Dijkstra")
 
