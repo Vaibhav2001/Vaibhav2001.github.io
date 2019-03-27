@@ -2,9 +2,6 @@
 title: Dijkstra's Algorithm(Shortest Path)
 ---
 
-
-### Dijkstra's Algoritm
-
 ![Edsger W. Dijkstra](/images/Edsger_Wybe_Dijkstra.jpg "Edsger W. Dijkstra")
 
 <div style="text-align: justify">
