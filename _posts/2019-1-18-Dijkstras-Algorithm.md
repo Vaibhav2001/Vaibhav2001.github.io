@@ -1,5 +1,5 @@
 ---
-title: Dijkstra's Algorithm(Computing Shortest Path)
+title: Dijkstra's Algorithm(Computing Shortest Paths)
 ---
 
 ![Edsger W. Dijkstra](/images/Edsger_Wybe_Dijkstra.jpg "Edsger W. Dijkstra")
