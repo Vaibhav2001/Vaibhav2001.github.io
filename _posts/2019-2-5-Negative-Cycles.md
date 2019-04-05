@@ -13,29 +13,29 @@ The code is pretty straightforward too. Here is my code.
 //this has to be run after the Bellman Ford Algorithm
 //this is the Vth iteration
 for(int i = 0; i < V; i++)
-    {
-    	if(dist[i] == INT_MAX)
-    	{
-    		continue;
-    	}
-    	for(auto it = adj[i].begin(); it != adj[i].end(); it++)
-    	{
-    		v = it->first;
-			  w = it->second;
-        //cheching if there is any change
-    		if(dist[v] > dist[i] + w)
-    		{
-    			flag = 0;
-    			break;
-    		}
-    	}
-  	}
-  	if(flag)
-  	{
-		printSolution(dist, V);
-  	}
-  	else
-  	{
-  		cout << "Negative Cycle" << endl;;
-  	}
+{
+	if(dist[i] == INT_MAX)
+	{
+		continue;
+	}
+	for(auto it = adj[i].begin(); it != adj[i].end(); it++)
+	{
+		v = it->first;
+		w = it->second;
+		//cheching if there is any change
+		if(dist[v] > dist[i] + w)
+		{
+			flag = 0;
+			break;
+		}
+	}
+}
+if(flag)
+{
+	printSolution(dist, V);
+}
+else
+{
+	cout << "Negative Cycle" << endl;;
+}
 ```
