@@ -32,7 +32,12 @@ for(int i = 0; i < V; i++)
 }
 if(flag)
 {
-	printSolution(dist, V);
+	//if there is no negative cycle then print the solution
+	cout << "Vertex Distance from Source" << endl;
+	for (int i = 0; i < V; i++)
+	{
+	    cout << i << " " << dist[i];
+	}
 }
 else
 {
