@@ -27,7 +27,7 @@ int main()
 ```
 
 <div style="text-align: justify">
-  The above implementation is pretty straightforward and simple. Now let's think a about a <b><em>recursive</e></b> way to solve this very same question. <b>Remember</b> resursion means <b><em>"calling the same function within itself"</em></b>.
+  The above implementation is pretty straightforward and simple. Now let's think a about a <b><em>recursive</em></b> way to solve this very same question. <b>Remember</b> resursion means <b><em>"calling the same function within itself"</em></b>.
 </div>
 
 ```cpp
