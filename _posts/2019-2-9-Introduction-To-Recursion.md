@@ -65,5 +65,5 @@ int main()
 ![Memory Stacks](/images/rec.png "Memory Stacks")
 
 <div style="text-align: justify">
-	So when we reach this configuration then the <b>first return statement execute<b> and slowly each return statement executes thus giving us our answer.
+	So when we reach this configuration then the <b>first return statement execute</b> and slowly each return statement executes thus giving us our answer.
 </div>
