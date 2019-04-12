@@ -61,3 +61,9 @@ int main()
 <br>
   One important thing to notice, however, is that any function <b>never returns the value until and unless it has calculated all the values</b>. So in our recursive function that the values won't start getting returned <b>till we reach our base case(which is n==1 || n==0)</b>. The function actually <b>waits</b> for the <b>succesive function</b> to return its value before the <b>original function returns anything</b>. And in the memory it looks like follows.
 </div>
+
+![Memory Stacks](/images/rec.jpg "Memory Stacks")
+
+<div style="text-align: justify">
+	
+</div>
