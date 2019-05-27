@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Triathalon - INOI 2012
+title: Smart Phone - ZI0 2014 (Based on Sorting)
 ---
 
 [Question Link]((https://www.codechef.com/ZCOPRAC/problems/ZCO14003))
@@ -8,7 +8,7 @@ title: Triathalon - INOI 2012
 ### Overview
 
 <div style="text-align: justify">
-
+	This question came in ZIO 2014 and was a bit of a easy question, however, for starters these problems can be new and overwhelming. So we are the budget for N people and we are actually designing a new smart phone app. How exciting is that!!!. Now we are supposed to also find out the maximum revenue that we can earn. So that's really not that difficult if you have the right tools with you. This question is based on simple sorting and traversal of the array but it might be a bit weird for newbies so first think of a solution in your head using all the hints that i already gave you and then move foward.
 </div>
 
 ### Understanding The Question
