@@ -11,18 +11,12 @@ title: Smart Phone - ZI0 2014 (Based on Sorting)
 	This question came in <b>ZIO 2014</b> and was a bit of a easy question, however, for starters these problems can be <em><b>new and overwhelming</b></em>. So we are the budget for N people and we are actually designing a new smart phone app. <b>How exciting is that!!!</b>. Now we are supposed to also find out the <b>maximum revenue</b> that we can earn. So that's really not that difficult if you have the <b>right</b> tools with you. This question is based on <em><b>simple sorting and traversal</b></em> of the array but it might be a bit weird for newbies so <b>first think of a solution</b> in your head using all the hints that I already gave you and then move forward.
 </div>
 
-### Understanding The Question
-
-<div style="text-align: justify">
-So the question tells us that there is some competition taking place in some town and the mayor of the town wants the competition to end <b>as soon as possible</b>. There are three parts to the competition: COBOL, pole vault, and donut-eating. We are told that only one person at a time can participate in <em><b>COBOL(which is the first event)</b></em> and there no limits for the latter ones. We already know beforehand the time required by each participant in each event. That is all there is in the question and now we need to find a way to solve it.
-</div>
-
 ### Approaching The Solution
 
 _**I highly recommend you to try to find your own approach before reading mine**_
 
 <div style="text-align: justify">
-The first thing that we notice is that in the last two events any number of participants can take part at the same time. So, we dont need to take care of those two times for each participant as <b>separate values</b> we can directly add them and store them as one. We now just have to take care of the time for the COBOL event. We can start by sorting the values of the times of the participant in the descending order of time taken to get thorugh the first event. And now most of our work is almost done. You might think, <b>"WE ARE DONE!!"</b> but actually we cannot just add on these values together just yet to get to the solution. Why?? Because we have sorted the values not actually took advantage of this organisation. We just need to <em><b>think systematically</b></em>. So the thing we need to observe is that after adding the time of the first participant <em>(in our sorted list)</em> to the total time <em>(intialised as 0)</em>, when we move on the next participant simply adding the values won't do any good because the time <em><b>may overlap</b></em> with the preceding participant <b>(this is true for any <em>ith</em> participant)</b>. We need to add the time taken for the first event for the first event for every participant while <em>iterating over them in our sorted list</em>. The thing we <em>need to check</em> before adding the time for the <b>last event(second + third)</b> is whether it is overlapping, and we do that by storing the <b>higher value of the sum till the last participant</b> and the <b>sum of all the times for the first event till that participant</b> plus the time taken by that participant in fininshing the last event. Think about it. This is a nice (one migth say classic) example of <em><b>Dynamic Programming</b></em>. 
+	The first thing that we can see is that obviously we have to <b>sort</b>, and after sorting half our work is already done for us. We can sort in <b>increasing order or decreasing order</b> as it doesn't matter which way you do it. I chose the former one. After doing that all you need to do is to start from the 1st postion and traverse all the way upto the end. Now whenever we land at the <em><b>ith</b></em> budget then there are <em><b>(n-i+1)</b></em> people who can afford it, so all we have to do is to check which gives the <b>maximum value</b> after multiplication by the number of consumers who can afford it. By doing this we will get our answer efficiently.
 </div>
 
 If you need help with the code then here is mine-
@@ -30,37 +24,26 @@ If you need help with the code then here is mine-
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
-
-// helper function for sorting in descending order
-bool myfunc(pair<int, int> a, pair<int, int> b)
-{
-	return a.second > b.second;
-}
-
 int main()
 {
 	int n;
 	cin >> n;
-	int f = 2;
-	pair<int, int> a[n];
-
-	//taking the input
+	int a[n];
+	for(int i = 0; i< n; i++)
+	{
+		cin >> a[i];
+	}
+	sort(a, a+n);
+	long long max = 0;
 	for(int i = 0; i < n; i++)
 	{
-		int b, c;
-		cin >> a[i].first >> b >> c;
-		a[i].second = b+c;
+		long long c = (long long)a[i]*(n-i);
+		if(max < c)
+		{
+			max = c;
+		}		
 	}
-	//sorting according to the first event in descending order
-	sort(a, a+n, myfunc);
-	int m = 0;
-	int x = 0;
-	// applying our dynamic rule for this question
-	for(int i = 0; i < n; i++)
-	{
-		x += a[i].first;
-		m = max(x + a[i].second, m);
-	}
-	cout << m;
+	cout << max;	
+	return 0;
 }
 ```
