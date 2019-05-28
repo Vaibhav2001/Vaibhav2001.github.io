@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smart Phone - ZC0 2014 (Implementation)
+title: Video Game - ZCO 2014 (Implementation)
 ---
 
 [Question Link](https://www.codechef.com/ZCOPRAC/problems/ZCO14001)
