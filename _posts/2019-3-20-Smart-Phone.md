@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smart Phone - ZC0 2014 (Sorting)
+title: Smart Phone - ZCO 2014 (Sorting)
 ---
 
 [Question Link]((https://www.codechef.com/ZCOPRAC/problems/ZCO14003))
