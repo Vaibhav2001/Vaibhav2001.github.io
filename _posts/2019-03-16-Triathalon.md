@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Triathalon - INOI 2012
+title: Triathalon - INOI 2012 (Dynamic Programming)
 ---
 
 [Question Link](https://www.codechef.com/INOIPRAC/problems/INOI1201)
