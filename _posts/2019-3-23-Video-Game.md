@@ -8,7 +8,7 @@ title: Video Game - ZCO 2014 (Implementation)
 ### Overview
 
 <div style="text-align: justify">
-	This question came in <b>ZCO 2014</b> and was purely based on <b>implementation</b>. The only <b>prerequisite</b> according to me for this particular question is a <b>basic knowledge of the essentials of programming</b>. This question falls into that rare category of questions, which only require you to follow every line bit by bit without applying brains. So the question basically tells us that we are playing a game in which we are given the <b>initial arrangements</b> of the blocks. Now, all we have to do is to tell the final state of the blocks after <b>executing a list of commands</b>. 
+This question came in <b>ZCO 2014</b> and was purely based on <b>implementation</b>. The only <b>prerequisite</b> according to me for this particular question is a <b>basic knowledge of the essentials of programming</b>. This question falls into that rare category of questions, which only require you to follow every line bit by bit without applying brains. So the question basically tells us that we are playing a game in which we are given the <b>initial arrangements</b> of the blocks. Now, all we have to do is to tell the final state of the blocks after <b>executing a list of commands</b>. 
 </div>
 
 ### Approaching The Solution
