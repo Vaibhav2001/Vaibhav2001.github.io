@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free Ticket - INOI 2014 (Graphs)
+title: Free Ticket - INOI 2014 (Dijkstra)
 ---
 
 [Question Link](https://www.codechef.com/INOIPRAC/problems/INOI1402)
