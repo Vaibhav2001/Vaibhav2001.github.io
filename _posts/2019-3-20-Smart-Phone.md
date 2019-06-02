@@ -8,7 +8,7 @@ title: Smart Phone - ZCO 2014 (Sorting)
 ### Overview
 
 <div style="text-align: justify">
-	This question came in <b>ZCO 2014</b> and was a bit of a easy question, however, for starters these problems can be <em><b>new and overwhelming</b></em>. So we are the budget for N people and we are actually designing a new smart phone app. <b>How exciting is that!!!</b>. Now we are supposed to also find out the <b>maximum revenue</b> that we can earn. So that's really not that difficult if you have the <b>right</b> tools with you. This question is based on <em><b>simple sorting and traversal</b></em> of the array but it might be a bit weird for newbies so <b>first think of a solution</b> in your head using all the hints that I already gave you and then move forward.
+	This question came in <b>ZCO 2014</b> and was a bit of a easy question. However, for starters these problems can be <em><b>new and overwhelming</b></em>. So, we are given the budget for N people and we are actually designing a new smart phone app. <b>How exciting is that!!!</b>. Now we are supposed to also find out the <b>maximum revenue</b> that we can earn. So that's really not that difficult if you have the <b>right</b> tools with you. This question is based on <em><b>simple sorting and traversal</b></em> of the array but it might be a bit weird for newbies so <b>first think of a solution</b> in your head using all the hints that I already gave you and then move forward.
 </div>
 
 ### Approaching The Solution
