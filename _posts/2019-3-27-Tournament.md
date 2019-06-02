@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chewing - ZCO 2015 (Dynamic Programming)
+title: Chewing - ZCO 2015 (Logic and Maths)
 ---
 
-[Question Link](https://www.codechef.com/INOIPRAC/problems/INOI1201)
+[Question Link](https://www.codechef.com/ZCOPRAC/problems/ZCO13003)
 
 ### Overview
 
 <div style="text-align: justify">
-This question came in ZCO in the year 2013 and 
+This question came in ZCO in the year 2013 and was based on logic and simple maths. The question basically requires you to think and that's all you need honestly.
 </div>
 
 ### Approaching The Solution
