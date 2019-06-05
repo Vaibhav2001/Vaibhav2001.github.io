@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in len(site.posts) %}
+  {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ site.posts[len(site.posts)-post-1].url }}">{{ site.posts[len(site.posts)-post-1].title }}</a></h1>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <a href="{{ site.baseurl }}{{ site.posts[len(site.posts)-post-1].url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       <p><br></p>
     </article>
   {% endfor %}
