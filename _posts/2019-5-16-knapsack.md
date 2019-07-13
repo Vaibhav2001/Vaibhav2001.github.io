@@ -33,10 +33,12 @@ So what is <b>recursion</b>? If you recall recursion is one <b>function calling 
 Recursion requires us to make <b>base cases</b>. So we need to first find our base cases. Before that let's talk about the variables that we might need. The <b>first variable</b> is obviously the <b>amount of weight that our knapsack can still carry</b> and the other one is an <b>iterator</b>. You can also use a size variable (although it's unecessary). The base case would be when the number of <b>remainig elements(size) is 0 (or the iterator is at the end)</b> or when the <b>remaining capacity of the knapsack is 0</b>. If this happens the we can smply return 0 <b>(as nothing more is to be added)</b>.
 <br>
 <br>
-Now comes the last part (and the one which actually makes changes to our answer). 
+Now comes the last part (and the one which actually makes changes to our answer). Intially, in the main function we can call our function with the remaining weight as the total capacity and the iterator at 0. Then if none of the base cases are met we would first check if the weight of the element is greater than the remaining weight. If it is then we can skip that element. If not then we have two conditions: either we have to choose the element or we don't. If we choose it the our ultimate answer will be the sum of the original value, the value of the item and the value that we might get from other elements. If we do not choose this element then we can just skip it. If we store the max of these values and keep sending it to the next call of the function we will have our answer.
 <br>
 <br>
-This might seem like a lot of work but later you will realise that it's the first step in a long flight of stairs.
+This might seem like a hoax but believe me it works. Take a smal example, use your pen and paper and try to solve the question using this approach. You will see that we are checking for all possible cases in a smart way by avoiding obvious wrong answers. How?? By using our base cases.
+<br>
+<br>
 </div>
 
 If you need help with the code then here is mine-
@@ -44,40 +46,66 @@ If you need help with the code then here is mine-
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
+
+typedef long long ll;
+ll n, w;
+ll val[1000];
+ll wt[1000];
+
+ll knap(int w, int size, int i)
+{
+    if(size == 0)
+    {
+        return 0;
+    }
+    if(w == 0)
+    {
+        return 0;
+    }
+    if(wt[i] > w)
+    {
+        return knap(w, size-1, i+1);
+    }
+    ll exc = knap(w, size-1, i+1);
+    ll inc = val[i] + knap(w-wt[i], size-1, i+1);
+    return max(exc, inc);
+}
+
 int main()
 {
-    //input
-    int s, n;
-    cin >> s >> n;
-    int a[n];
+    cin >> n >> w;
     for(int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> val[i];
     }
-    int m[s+1];
-
-    //intialise to max 
-    for(int i = 0; i < s+1; i++)
+    for(int i = 0; i < n; i++)
     {
-        m[i] = numeric_limits<int>::max();
+        cin >> wt[i];
     }
-
-    //Dyamic Programming
-    m[0] = 0;
-    for(int i = 1; i <= s; i++)
+    ll dp[n+1][w+1];
+    for(int i = 0; i <= n; i++)
     {
-        for(int j = 0;j < n; j++)
+        dp[i][0] = 0;
+    }
+    for(int j = 1; j <= w; j++)
+    {
+        dp[0][j] = 0;
+    }
+    for(int i = 1; i <= n; i++)
+    {
+        for(int j = 1; j <= w; j++)
         {
-            if(a[j] <= i)
+            if(wt[i-1] <= j)
             {
-                if(m[i-a[j]]+1 < m[i] && m[i-a[j]] != INT_MAX)
-                {
-                    m[i] = m[i-a[j]]+1;
-                }
+                dp[i][j] = max(val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j]);
+            }
+            else
+            {
+                dp[i][j] = dp[i-1][j];
             }
         }
     }
-    cout << m[s];
-    return 0;
+    cout << dp[n][w] << endl;
+    cout << knap(w, n, 0) << endl;
 }
 ```
