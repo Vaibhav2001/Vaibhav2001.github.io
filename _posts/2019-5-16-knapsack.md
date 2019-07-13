@@ -24,16 +24,16 @@ _**I highly recommend you to try to find your own approach before reading mine**
 The first thing you should do is keep the <b>computer aside</b> and take out your <b>pen and a piece of paper</b>. Because many of us will be tempted to make an if-else construct to solve this question if we are not aware of DP. If you <b>make some examples</b> and try solving some questions you might get some idea of what the question requires you to do. 
 <br>
 <br>
-Remember from <b>"The Coin Change Problem"</b> that the solution in these types of questions is never greedy so you have to think of an optimal solution. I will discuss in the future that how DP and recursion are essentially the same thing but for now let's debunk the question and start working towards our solution. 
+Remember from <b>"The Coin Change Problem"</b> that the solution in these types of questions is never greedy so you have to think of an optimal solution. I will discuss in the future that how <b>DP and recursion are essentially the same thing</b> but for now let's debunk the question and start working towards our solution. 
 <br>
 <br>
-So what is <b>recursion</b>? If you recall recursion is one function calling itself while its running. So now that's a big hint. It tells us that we have to do something again and again and that will help us reach our answer.  
+So what is <b>recursion</b>? If you recall recursion is one <b>function calling itself while its running</b>. So now that's a big hint. It tells us that we have to do something again and again and that will help us reach our answer.  
 <br>
 <br>
-Recursion requires us to make base cases 
+Recursion requires us to make <b>base cases</b>. So we need to first find our base cases. Before that let's talk about the variables that we might need. The <b>first variable</b> is obviously the <b>amount of weight that our knapsack can still carry</b> and the other one is an <b>iterator</b>. You can also use a size variable (although it's unecessary). The base case would be when the number of <b>remainig elements(size) is 0 (or the iterator is at the end)</b> or when the <b>remaining capacity of the knapsack is 0</b>. If this happens the we can smply return 0 <b>(as nothing more is to be added)</b>.
 <br>
 <br>
-Now comes the last part (and the most trickiest). We can now start <b>traversing our grid in top to down and left to right manner</b>. For all values of <b>j which are less than ith coin's value we can copy the value of the position i-1</b>, j. WHY?? Because it is like we are not even using that coin so the answer that we have obtained so far <b>won't change even if we have this new coin</b>. Now for all other values where j is greater than ith coin's denomination we have two choices: <b>either we don't use this coin, which would require us to do what we did in the above scenario, and the other choice that we have is that we use that use this coin.</b> So, to make a decision we would compare the value from the above cell to the value of <b>grid[i-1][j-c[i]] + 1 (we compare with this value because what we are doing is that subtracting the value of the coin from the change as that is already given and then using the best value that is avaiable for the left over change)</b>. We choose the lesser of the two values and in the end our answer is in <b>grid[N-1][C] (this position represnts that position where j is equal to our change and all the coins are take into account)</b>.
+Now comes the last part (and the one which actually makes changes to our answer). 
 <br>
 <br>
 This might seem like a lot of work but later you will realise that it's the first step in a long flight of stairs.
