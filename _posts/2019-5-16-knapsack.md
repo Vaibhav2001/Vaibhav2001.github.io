@@ -39,6 +39,7 @@ Now comes the last part (and the one which actually makes changes to our answer)
 This might seem like a hoax but believe me it works. Take a smal example, use your pen and paper and try to solve the question using this approach. You will see that we are checking for all possible cases in a smart way by avoiding obvious wrong answers. How?? By using our base cases.
 <br>
 <br>
+To solve it using DP just use the same logic but consider a 2 dimensional grid with its rows as the element i and the coloumn as the remaining weight. Then initialise it using the base cases from recursion and move top down and you wil have your answer. I have attached both the codes below.
 </div>
 
 If you need help with the code then here is mine-
