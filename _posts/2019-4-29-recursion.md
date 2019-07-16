@@ -53,7 +53,7 @@ int fibbonaci(int n)
 ### Questions on Recursion
 
 <div style="text-align: justify">
-There are some great questions on recursion to get you started. I have solved some and i will linkn them down below.
+There are some great questions on recursion to get you started. I have solved some and I will link them down below.
 </div>
 
 [The Coin Change Problem](https://www.vaibhav.github.io/coin)
