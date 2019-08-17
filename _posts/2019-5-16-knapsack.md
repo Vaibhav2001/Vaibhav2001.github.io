@@ -13,7 +13,7 @@ Now your job is to is to steal the things which will give you give you the maxim
 ### Overview
 
 <div style="text-align: justify">
-This is one of the classic questions that require <b>DP (Dynamic Prgramming) or Recursion</b>, so I thought that it is important to discuss it. This question is a very popular one and is genrally one of the first questions of DP that many people encounter. I am going to discuss <b>recursive method</b> to solve the question and also give a hint about the DP method.
+This is one of the classic questions that require <b>DP (Dynamic Prgramming)</b>, so I thought that it is important to discuss it. This question is a very popular one and is genrally one of the first questions of DP that many people encounter. I am going to discuss <b>recursive method</b> to solve the question and also give a hint about the DP method.
 </div>
 
 ### Approaching The Solution
@@ -24,7 +24,7 @@ _**I highly recommend you to try to find your own approach before reading mine**
 The first thing you should do is keep the <b>computer aside</b> and take out your <b>pen and a piece of paper</b>. Because many of us will be tempted to make an if-else construct to solve this question if we are not aware of DP. If you <b>make some examples</b> and try solving some questions you might get some idea of what the question requires you to do. 
 <br>
 <br>
-Remember from <b>"The Coin Change Problem"</b> that the solution in these types of questions is never greedy so you have to think of an optimal solution. I will discuss in the future that how <b>DP and recursion are essentially the same thing</b> but for now let's debunk the question and start working towards our solution. 
+Remember from <b>"The Coin Change Problem"</b> that the solution in these types of questions is never greedy so you have to think of an optimal solution. I will discuss in the future that how <b>DP and recursion with memoization are essentially the same thing</b> but for now let's debunk the question and start working towards our solution. 
 <br>
 <br>
 So what is <b>recursion</b>? If you recall recursion is one <b>function calling itself while its running</b>. So now that's a big hint. It tells us that we have to do something again and again and that will help us reach our answer.  
@@ -36,22 +36,25 @@ Recursion requires us to make <b>base cases</b>. So we need to first find our ba
 Now comes the last part (and the one which actually makes changes to our answer). Intially, in the main function we can call our function with the <b>remaining weight as the total capacity and the iterator as 0 as paramters</b>. Then if none of the base cases are met we would <b>first check if the weight of the element is greater than the remaining weight</b>. If it is then we can skip that element. If not then we have two conditions: <b>either we have to choose the element or we don't</b>. If we choose it the our ultimate answer will be the <b>sum of the original value, the value of the item and the value that we might get from other elements. If we do not choose this element then we can just skip it</b> If we store the <b>maximum</b> of these values and keep sending it to the next call of the function we will have our answer.
 <br>
 <br>
-This might <b>seem like a hoax</b> but believe me it works. Take a small example, use your pen and paper and try to solve the question using this approach. You will see that we are checking for <b>all possible cases in a smart way by avoiding obvious wrong answers. How?? By using our base cases</b>.
+This might <b>seem like a hoax</b> but believe me it works. Take a small example, use your pen and paper and try to solve the question using this approach. You will see that we are checking for <b>all possible cases in a smart way by avoiding obvious wrong answers. How?? By using our base cases</b>. Now to further make the program efficient and avoid repetitions we can use a grid to store values. 
 <br>
 <br>
-To solve it using DP just use the same logic but consider a <b>2 dimensional grid with its rows as the element i and the coloumn as the remaining weight</b>. Then initialise it using the <b>base cases from recursion</b> and move top down and you wil have your answer. I have attached both the codes below.
+To solve it using a bottom up DP just use the same logic but consider a <b>2 dimensional grid with its rows as the element i and the coloumn as the remaining weight</b>. Then initialise it using the <b>base cases from recursion</b> and move top down and you wil have your answer. I have attached both the codes below.
 </div>
 
 If you need help with the code then here is mine-
 
 ```cpp
 #include<bits/stdc++.h>
+
 using namespace std;
 
 typedef long long ll;
 ll n, w;
 ll val[1000];
 ll wt[1000];
+ll rec[1000][1000];
+
 
 ll knap(int w, int size, int i)
 {
@@ -63,13 +66,19 @@ ll knap(int w, int size, int i)
     {
         return 0;
     }
+    if(rec[i][w] != -1)
+    {
+        return rec[i][w];
+    }
     if(wt[i] > w)
     {
-        return knap(w, size-1, i+1);
-    }
+        rec[i][w] = knap(w, size-1, i+1);
+        return rec[i][w];
+    } 
     ll exc = knap(w, size-1, i+1);
     ll inc = val[i] + knap(w-wt[i], size-1, i+1);
-    return max(exc, inc);
+    rec[i][w] = max(exc, inc);
+    return rec[i][w];
 }
 
 int main()
@@ -82,6 +91,13 @@ int main()
     for(int i = 0; i < n; i++)
     {
         cin >> wt[i];
+    }
+    for(int i = 0; i <= n; i++)
+    {
+        for(int j = 0; j <= w; j++)
+        {
+            rec[i][j] = -1;
+        }
     }
     ll dp[n+1][w+1];
     for(int i = 0; i <= n; i++)
