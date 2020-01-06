@@ -57,22 +57,22 @@ int fibbonaci(int n)
 There are some great questions on recursion to get you started. I have solved some and I will link them down below.
 </div>
 
-[The Coin Change Problem](https://www.vaibhav.github.io/coin)
+[The Coin Change Problem](https://www.vaibhav2001.github.io/coin)
 
 <div>
     <br>
 </div>
 
-[The 0-1 Knapsack Problem](https://www.vaibhav.github.io/knapsack)
+[The 0-1 Knapsack Problem](https://www.vaibhav2001.github.io/knapsack)
 
 <div>
     <br>
 </div>
 
-[Triathalon - INOI 2012](https://www.vaibhav.github.io/Triathalon)
+[Triathalon - INOI 2012](https://www.vaibhav2001.github.io/Triathalon)
 
 <div>
     <br>
 </div>
 
-[Bellman Ford](https://www.vaibhav.github.io/Bellman)
+[Bellman Ford](https://www.vaibhav2001.github.io/Bellman)
